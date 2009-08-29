@@ -1,0 +1,145 @@
+body{
+    padding: 0;
+    font-family: verdana, helvetica, sans-serif;
+    color: #993300
+    font-size: 15px;
+    text-align: left;
+    margin: 0 auto;
+    width: 725px;
+    
+}
+
+p {
+    text-align: left;
+    font-size: 13px;
+    margin: 0 0 0 0;
+    padding: 0px;
+}
+
+a {
+    color: #710202;
+}
+
+a:hover {
+    border-bottom: 1px dotted #710202;
+}
+
+div#title {
+    text-align: center;
+    margin: 10px 10px 10px 15px;
+}
+
+div#subtitle {
+    margin: 1px 0 5px 0 ;
+    font-size: 12px;
+    color: #ffffff;
+    text-align: right;
+    background-color: #710202;
+    padding: 0px 5px 0px 5px;
+    font-weight: bold;
+    text-transform: capitalize
+}
+
+#body {
+    float: left;
+    margin-top: 10px;
+    width: 600px;
+    text-align: left;
+}
+
+#body p.menu {
+    padding: 0;
+}
+
+#body p {
+    font-size: 14px;
+}
+
+#body p.caption {
+    padding: 0 0 10px 15px;
+    font-size: large;
+}
+	
+#body strong {
+    line-height: 16px;
+}
+
+#body ul {
+    list-style-type: none;
+}
+
+#menulist a {
+    text-decoration: none;
+}
+
+#day {
+    float: left;
+}
+
+#hours {
+    float: left;
+    padding-left: 25px;
+}
+
+#navi {
+    width: 110px;
+    float: left;
+    margin: 10px 0 10px 0;
+    border-right: 1px solid #710202;
+    padding-right: 2px;
+}
+
+#navi p {
+    padding: 5px 0 5px 0 ;
+    font-size: 12px;
+}
+
+#navi a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navi a:hover {
+    border-bottom: 1px dotted #710202;
+}
+
+#subnavi {
+    margin-left: 10px;
+}
+
+#subnavi a {
+    font-weight: normal;
+}
+
+#hr {
+    margin: 7px 10px 7px 5px;
+    
+    border-top: 1px solid #710202;
+}
+
+#footer {
+    width: 725px;
+    margin: 10px 0 0 0 ;
+    text-align: center;
+    font-size: 9px;
+    font-weight: normal; 
+    clear:both;
+    padding: 10px 0;
+    border-top: 1px solid #710202;
+} 
+
+form div.row {
+    clear: both;
+    padding-top: 5px;
+}
+
+form div.row label {
+    float: left;
+    width: 75px;
+    
+}
+
+form div.row input {
+    float: left;
+    width: 200px;
+}

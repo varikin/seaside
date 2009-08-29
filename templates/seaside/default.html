@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load navigation %}
+
+{% block title %}{{ seaside.title }} - {{ block.super }}{% endblock %}
+
+{% block subtitle %}{{ seaside.title }}{% endblock %}
+
+{% block navigation %}
+  {% get_nav_items as nav_items %}
+  {% for item in nav_items %}
+    <p><a href="{{ item.page.url }}">{{ item.name }}</a></p>
+    {% if seaside.is_menu and item.page.is_menu %}
+      <div id="subnavi">
+      {% get_menu_nav_items as menu_items %}
+      {% for menu in menu_items %}
+	<p><a href="{{ menu.page.url }}">{{ menu.name }}</a></p>
+      {% endfor %}
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
+
+{% block content %}{{ seaside.content }}{% endblock %}

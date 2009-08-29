@@ -1,0 +1,37 @@
+{% load navigation %}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="keywords" content="countryside family restaurant chicken broaster broasted roseville minnesota">
+  <meta name="description" content"Countryside Family Restaurant">
+  <title>{% block title %}Countryside Family Restaurant{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css" type="text/css" media="screen, projection">
+</head>
+<body>
+  <div id="title">
+    <img src="/static/logo.png" alt="Countryside Restaurant"/>
+  </div>
+  <div id="subtitle">{% block subtitle %}{% endblock %}</div>
+  <div id="navi">
+    {% block navigation %}
+      {% get_nav_items as nav_items %}
+      {% for item in nav_items %}
+        <p><a href="{{ item.page.url }}">{{ item.name }}</a></p>
+      {% endfor %}
+    {% endblock %}
+    <div id="hr"></div>
+    <p><a href="http://www.broaster.com">Broaster&#174;</a></p>
+    <p><a href="http://www.msra.com">MSRA</a></p>
+    <p><a href="http://www.ci.roseville.mn.us">City of Roseville</a></p>    
+  </div>
+	<div id="body">{% block content %}{% endblock %}</div>
+  <div id="footer">
+    If you have any questions or wish to place a carry out order, 
+    please call (651) 633-4422.<br>
+    We accept Visa, Mastercard, and checks.
+  </div>
+</body> 
+</html>
