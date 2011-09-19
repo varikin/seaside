@@ -75,8 +75,41 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Third party apps
+    'ckeditor',
+
+    # My apps
     'seaside.pages',
 )
+
+CKEDITOR_CONFIGS = {
+    'default': {
+
+        'toolbar': [
+            [      'Cut', 'Undo', 'Redo',
+              '-', 'Bold', 'Italic', 'Underline', 'Strike',
+              '-', 'Subscript', 'Superscript',
+              '-', 'Link', 'Unlink', 'Anchor', 'Image',
+              '-', 'Format',
+              '-', 'SpellChecker', 'Scayt',
+              '-', 'Maximize',
+            ],
+            [      'HorizontalRule',
+              '-', 'Table',
+              '-', 'BulletedList', 'NumberedList',
+              '-', 'Cut','Copy','Paste','PasteText','PasteFromWord',
+              '-', 'SpecialChar',
+              '-', 'Source',
+              '-', 'About',
+            ]
+        ],
+        'width': 840,
+        'height': 300,
+        'toolbarCanCollapse': False,
+    }
+}
+
 
 
 LOGGING = {

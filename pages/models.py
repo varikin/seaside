@@ -1,9 +1,10 @@
 from django.db import models
+from ckeditor.fields import HTMLField
 
 class SeasidePage(models.Model):
     url = models.CharField(max_length=100, db_index=True)
     title = models.CharField(max_length=200)
-    content = models.TextField(blank=True)
+    content = HTMLField(blank=True)
     is_menu = models.BooleanField()
 
     class Meta:
