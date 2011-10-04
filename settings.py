@@ -78,6 +78,7 @@ INSTALLED_APPS = (
 
     # Third party apps
     'ckeditor',
+    'storages',
 
     # My apps
     'seaside.pages',
@@ -129,6 +130,14 @@ LOGGING = {
         },
    }
 }
+
+# Django Storage settings
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY = ''
+AWS_STORAGE_BUCKET_NAME = ''
+
 
 try:
     from local_settings import *
